@@ -1,16 +1,25 @@
 <div class="hero-banner bg-cover up-slant">
-  <div class="hero-content" style="background-color:white;">
-  <div>
-    <h1>Hella Genki</h1>
-  </div>
+  <div class="hero-content " style="background-color:white;">
+    <h1>HellaGenki</h1>
+    <h2>Keep track of your favorite anime here</h2>
   </div>
 </div>
-<div class="inner">
-  <h1>Show List</h1>
-<% @shows.each do |show| %>
-<%= link_to show.title, show_path(show) %>
-<% end %>
+<div class="inner content">
+  <div class="shows-section pt50">
+    <h2 class="section-header">Show List</h2>
+    <%= link_to "New Anime", new_show_path %>
+    <% @shows.each do |show| %>
+      <div class="show-card mt20 cf">
+        <div class="show-image float50 right"></div>
+        <div class="show-info float50">
+          <h3><%= link_to show.title, show_path(show) %></h3>
+          <p><%= show.description %></p>
+          <%= link_to "See More", show_path(show), class: "faded" %>
+        </div>
+      </div>
+    <% end %>
 
-<%= link_to "New Anime", new_show_path %>
-
+  </div>
 </div>
+
+
