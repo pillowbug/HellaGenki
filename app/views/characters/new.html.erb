@@ -1,0 +1,10 @@
+<h1>Add a character</h1>
+<h2><%= @show.title %></h2>
+
+<%= simple_form_for [@show, @character] do |c| %>
+  <%= c.input :description %>
+  <%= c.submit %>
+<% end %>
+
+<%= link_to "show page", show_path(@show.id) %>
+<%= link_to "go home", shows_path %>

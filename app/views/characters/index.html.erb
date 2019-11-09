@@ -1,0 +1,7 @@
+<h1>Characters in <%= @show.title %></h1>
+<% @characters.each do |character| %>
+<p><%= character.name %> - <%= character.description %> <%= link_to "edit", edit_show_character_path(@show, character) %> <%= link_to "delete", show_character_path(@show, character), method: :delete  %></p>
+<% end %>
+<%= link_to "add new character", new_show_character_path %>
+<%= link_to "show page", show_path(@show.id) %>
+<%= link_to "home", shows_path %>

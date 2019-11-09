@@ -1,6 +1,7 @@
 <h1><%= @show.title %></h1>
 <p><%= @show.release_year %></p>
 <p><%= @show.description %></p>
+<%= link_to "characters", show_characters_path(@show) %>
 <%= link_to "edit", edit_show_path %>
 <%= link_to "home", shows_path %>
 
