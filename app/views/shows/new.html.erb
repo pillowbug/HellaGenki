@@ -1,0 +1,10 @@
+<h1>Add an anime</h1>
+
+<%= simple_form_for @show do |s| %>
+  <%= s.input :title %>
+  <%= s.input :release_year %>
+  <%= s.input :description %>
+  <%= s.submit %>
+<% end %>
+
+<%= link_to "Home", shows_path %>

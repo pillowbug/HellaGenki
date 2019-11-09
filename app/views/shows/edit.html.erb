@@ -1,0 +1,11 @@
+<h1>Editing <%= @show.title %></h1>
+
+<%=simple_form_for @show do |s| %>
+<%= s.input :release_year %>
+<%= s.input :description %>
+<%= s.submit %>
+<% end %>
+
+<%= link_to "home", shows_path %>
+<!-- f.input :foo, as: :text, input_html: { value: f.object.foo.presence || 'Default value' } -->
+

@@ -1,0 +1,6 @@
+<h1>Show List</h1>
+<% @shows.each do |show| %>
+<%= link_to show.title, show_path(show) %>
+<% end %>
+
+<%= link_to "New Anime", new_show_path %>
