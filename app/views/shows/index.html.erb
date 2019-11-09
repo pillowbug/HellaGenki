@@ -1,6 +1,16 @@
-<h1>Show List</h1>
+<div class="hero-banner bg-cover up-slant">
+  <div class="hero-content" style="background-color:white;">
+  <div>
+    <h1>Hella Genki</h1>
+  </div>
+  </div>
+</div>
+<div class="inner">
+  <h1>Show List</h1>
 <% @shows.each do |show| %>
 <%= link_to show.title, show_path(show) %>
 <% end %>
 
 <%= link_to "New Anime", new_show_path %>
+
+</div>
