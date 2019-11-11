@@ -5,12 +5,13 @@
   </div>
 </div>
 <div class="inner content">
-<div class="shows-section pt50">
+<div class="add-shows-section pt50 highlight">
   <div class="section-nav">
     <h2 class="section-header">Add a show</h2>
     <%= link_to "home", shows_path, class: "btn-white shadow fancy-glow" %>
   </div>
-  <div class="form-container shadow"><%= simple_form_for @show do |s| %>
+  <div class="form-container shadow">
+    <%= simple_form_for @show do |s| %>
       <%= s.input :title %>
       <%= s.input :release_year %>
       <%= s.input :description %>

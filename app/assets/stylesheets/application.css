@@ -196,7 +196,7 @@ body {
   min-height: 1000px;
 }
 
-.shows-section::before {
+.highlight::before {
   content:'';
   width:60px;
   height:4px;
